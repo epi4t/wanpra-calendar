@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, maximum-scale=1, user-scalable=0"
+    />
+
+    <meta name="theme-color" content="black" />
+
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+
+    <meta name="apple-mobile-web-app-status-bar-style" content="default" />
+
+    <link rel="manifest" href="manifest.json" />
+
+    <link
+      rel="apple-touch-startup-image"
+      href="https://cdn.glitch.global/91e76a53-6ace-4772-b24a-e52d2e066725/750x1294.png?v=1694024390029"
+      media="(device-width: 375px) and (device-height: 667px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)"
+    />
+    <link
+      rel="apple-touch-startup-image"
+      href="https://cdn.glitch.global/91e76a53-6ace-4772-b24a-e52d2e066725/1125×2436.png?v=1694024401928"
+      media="(device-width: 375px) and (device-height: 812px) and (-webkit-device-pixel-ratio: 3) and (orientation: portrait)"
+    />
+    <link
+      rel="apple-touch-startup-image"
+      href="https://cdn.glitch.global/91e76a53-6ace-4772-b24a-e52d2e066725/1242×2688.png?v=1694024407336"
+      media="(device-width: 414px) and (device-height: 736px) and (-webkit-device-pixel-ratio: 3) and (orientation: portrait)"
+    />
+
+    <link
+      rel="apple-touch-startup-image"
+      media="screen and (device-width: 430px) and (device-height: 932px) and (-webkit-device-pixel-ratio: 3) and (orientation: portrait)"
+      href="https://cdn.glitch.global/91e76a53-6ace-4772-b24a-e52d2e066725/1290x2796.png?v=1694054306651"
+    />
+
+    <link
+      rel="shortcut icon"
+      href="https://cdn.glitch.global/91e76a53-6ace-4772-b24a-e52d2e066725/favicon.ico?v=1694022301049"
+      type="image/x-icon"
+    />
+    <link
+      rel="apple-touch-icon"
+      href="https://cdn.glitch.global/91e76a53-6ace-4772-b24a-e52d2e066725/apple-touch-icon.png?v=1694022298674"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="57x57"
+      href="https://cdn.glitch.global/91e76a53-6ace-4772-b24a-e52d2e066725/apple-touch-icon-57x57.png?v=1694022280015"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="72x72"
+      href="https://cdn.glitch.global/91e76a53-6ace-4772-b24a-e52d2e066725/apple-touch-icon-72x72.png?v=1694022285161"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="76x76"
+      href="https://cdn.glitch.global/91e76a53-6ace-4772-b24a-e52d2e066725/apple-touch-icon-76x76.png?v=1694022286892"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="120x120"
+      href="https://cdn.glitch.global/91e76a53-6ace-4772-b24a-e52d2e066725/apple-touch-icon-120x120.png?v=1694022291224"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="144x144"
+      href="https://cdn.glitch.global/91e76a53-6ace-4772-b24a-e52d2e066725/apple-touch-icon-144x144.png?v=1694022293284"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="152x152"
+      href="https://cdn.glitch.global/91e76a53-6ace-4772-b24a-e52d2e066725/apple-touch-icon-152x152.png?v=1694022295267"
+    />
+    <!-- เต็มจอใช้ 180x180 -->
+    <link 
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="https://cdn.glitch.global/91e76a53-6ace-4772-b24a-e52d2e066725/apple-touch-icon-180x180.png?v=1694022296889"
+    />
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+      integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+
+    <title>ปฏิทินวันพระ</title>
+    <style>
+      table,
+      th,
+      td {
+        border: 1px solid gray;
+        border-collapse: collapse;
+        font-size: 20px;
+        padding: 10px;
+      }
+      th {
+        width: 14.2857%;
+        height: 30px;
+      }
+      td {
+        height: 40px;
+        text-align: center;
+      }
+    </style>
+  </head>
+  <body style="background-color: black; color: white">
+    <br />
+    <div style="text-align: center; font-size: 40px">~ ปฏิทินวันพระ ~</div>
+    <br /><br />
+    <center>
+      <div>
+        <span id="ช่องแสดงเดือน" style="font-size: 30px"></span>
+        <select
+          id="ช่องแสดงปี"
+          style="font-size: 24px"
+          onchange="เปลี่ยนปี()"
+        ></select>
+      </div>
+    </center>
+    <br /><br />
+    <table style="width: 100%">
+      <tr>
+        <th>อา</th>
+        <th>จ</th>
+        <th>อ</th>
+        <th>พ</th>
+        <th>พฤ</th>
+        <th>ศ</th>
+        <th>ส</th>
+      </tr>
+      <tr>
+        <td id="d1"></td>
+        <td id="d2"></td>
+        <td id="d3"></td>
+        <td id="d4"></td>
+        <td id="d5"></td>
+        <td id="d6"></td>
+        <td id="d7"></td>
+      </tr>
+      <tr>
+        <td id="d8"></td>
+        <td id="d9"></td>
+        <td id="d10"></td>
+        <td id="d11"></td>
+        <td id="d12"></td>
+        <td id="d13"></td>
+        <td id="d14"></td>
+      </tr>
+      <tr>
+        <td id="d15"></td>
+        <td id="d16"></td>
+        <td id="d17"></td>
+        <td id="d18"></td>
+        <td id="d19"></td>
+        <td id="d20"></td>
+        <td id="d21"></td>
+      </tr>
+      <tr>
+        <td id="d22"></td>
+        <td id="d23"></td>
+        <td id="d24"></td>
+        <td id="d25"></td>
+        <td id="d26"></td>
+        <td id="d27"></td>
+        <td id="d28"></td>
+      </tr>
+      <tr>
+        <td id="d29"></td>
+        <td id="d30"></td>
+        <td id="d31"></td>
+        <td id="d32"></td>
+        <td id="d33"></td>
+        <td id="d34"></td>
+        <td id="d35"></td>
+      </tr>
+      <tr>
+        <td id="d36"></td>
+        <td id="d37"></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+      </tr>
+    </table>
+    <br /><br />
+    <div style="display: grid; grid-template-columns: 1fr 1fr">
+      <i
+        class="fa-regular fa-circle-left"
+        style="font-size: 40px; text-align: left"
+        onclick="กดซ้าย()"
+      ></i>
+      <i
+        class="fa-regular fa-circle-right"
+        style="font-size: 40px; text-align: right"
+        onclick="กดขวา()"
+      ></i>
+    </div>
+
+    <script>
+      var เดือนล่าสุด;
+      var ปีล่าสุด;
+      var กล่องเดือน = [
+        "มกราคม",
+        "กุมภาพันธ์",
+        "มีนาคม",
+        "เมษายน",
+        "พฤษภาคม",
+        "มิถุนายน",
+        "กรกฎาคม",
+        "สิงหาคม",
+        "กันยายน",
+        "ตุลาคม",
+        "พฤศจิกายน",
+        "ธันวาคม",
+      ];
+
+      // ข้อมูลวันพระในแต่ละปี
+      var วันพระ = {
+        2024: {
+          0: [4, 10, 18, 25], // มกราคม
+          1: [2, 19, 17, 24], // กุมภาพันธ์
+          2: [3, 19, 17, 24],
+          3: [1, 8, 16, 23],
+          4: [1, 7, 15, 22, 30],
+          5: [6, 14, 21, 29],
+          6: [5, 13, 20, 21, 28],
+          7: [4, 12, 19, 27],
+          8: [2, 10, 17, 25],
+          9: [2, 10, 17, 25, 31],
+          10: [8, 15, 23, 30],
+          11: [2, 15, 23, 29],
+        },
+        2025: {
+          0: [6, 13, 21, 28], // มกราคม
+          1: [5, 12, 20, 26], // กุมภาพันธ์
+          2: [6, 13, 21, 28],
+          3: [5, 12, 20, 26],
+          4: [4, 11, 19, 26],
+          5: [3, 10, 18, 25],
+          6: [3, 10, 18, 25],
+          7: [2, 9, 17, 23, 31],
+          8: [7, 15, 22, 30],
+          9: [7, 15, 21, 29],
+          10: [5, 13, 20, 28],
+          11: [5, 13, 19, 27],
+        },
+        2026: {
+          0: [5, 12, 19, 26], // มกราคม
+          1: [3, 10, 17, 24], // กุมภาพันธ์
+          2: [3, 10, 17, 24],
+          3: [3, 10, 17, 24],
+          4: [3, 10, 17, 24],
+          5: [3, 10, 17, 24],
+          6: [3, 10, 17, 24],
+          7: [3, 10, 17, 24],
+          8: [3, 10, 17, 24],
+          9: [3, 10, 17, 24],
+          10: [3, 10, 17, 24],
+          11: [3, 10, 17, 24],
+        },
+      };
+
+      function วันเดือนปีปัจจุบัน() {
+        let ปัจจุบัน = new Date();
+        เดือนล่าสุด = ปัจจุบัน.getMonth();
+        ปีล่าสุด = ปัจจุบัน.getFullYear();
+        สร้างดรอปดาวน์ปี();
+        รันวันที่(เดือนล่าสุด, ปีล่าสุด);
+      }
+
+      function สร้างดรอปดาวน์ปี() {
+        let dropdown = document.getElementById("ช่องแสดงปี");
+        dropdown.innerHTML = "";
+        Object.keys(วันพระ).forEach((ปี) => {
+          let option = document.createElement("option");
+          option.value = ปี;
+          option.text = parseInt(ปี) + 543;
+          dropdown.appendChild(option);
+        });
+        dropdown.value = ปีล่าสุด;
+      }
+
+      function ลบข้อมูลเก่า() {
+        for (let i = 1; i <= 37; i++) {
+          let cell = document.getElementById("d" + i);
+          cell.innerHTML = "";
+          cell.style.backgroundColor = "";
+        }
+      }
+
+      function รันวันที่(เดือน, ปี) {
+        let วันเริ่มต้น = new Date(ปี, เดือน, 1).getDay();
+        let จำนวนวัน = new Date(ปี, เดือน + 1, 0).getDate();
+        ลบข้อมูลเก่า();
+        แสดงเดือน();
+        for (let i = 1; i <= จำนวนวัน; i++) {
+          document.getElementById("d" + (วันเริ่มต้น + i)).innerHTML = i;
+        }
+        แสดงวันพระ(วันเริ่มต้น, เดือน, ปี);
+      }
+
+      function แสดงเดือน() {
+        document.getElementById("ช่องแสดงเดือน").innerHTML =
+          กล่องเดือน[เดือนล่าสุด] + "&nbsp";
+      }
+
+      function แสดงวันพระ(เศษเกิน, เดือน, ปี) {
+        let ปีข้อมูล = วันพระ[ปี] || [];
+        let วันพระในเดือน = ปีข้อมูล[เดือน] || [];
+        วันพระในเดือน.forEach((วัน) => {
+          if (วัน) {
+            document.getElementById(
+              "d" + (parseInt(วัน) + เศษเกิน)
+            ).style.backgroundColor = "#CD7F32";
+          }
+        });
+      }
+
+      function เปลี่ยนปี() {
+        ปีล่าสุด = parseInt(document.getElementById("ช่องแสดงปี").value);
+        รันวันที่(เดือนล่าสุด, ปีล่าสุด);
+      }
+
+      function กดขวา() {
+        if (เดือนล่าสุด < 11) {
+          เดือนล่าสุด++;
+          รันวันที่(เดือนล่าสุด, ปีล่าสุด);
+        }
+      }
+
+      function กดซ้าย() {
+        if (เดือนล่าสุด > 0) {
+          เดือนล่าสุด--;
+          รันวันที่(เดือนล่าสุด, ปีล่าสุด);
+        }
+      }
+
+      วันเดือนปีปัจจุบัน();
+    </script>
+  </body>
+</html>
